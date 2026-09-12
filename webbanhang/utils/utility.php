@@ -33,10 +33,6 @@ function getCookie($key) {
     return trim($value);
 }
 
-function getSecurityMD5($pwd) {
-    return md5(md5($pwd) . PRIVATE_KEY);
-}
-
 function validateToken($token) {
     if($_SSESSION['user']) {
         return $_SESSION['user'];
